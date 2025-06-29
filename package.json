@@ -1,0 +1,26 @@
+{
+  "name": "examen-2",
+  "version": "1.0.0",
+  "description": "Backend para examen II",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielRod04/Examen-II-UX.git"
+  },
+  "author": "Angel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabrielRod04/Examen-II-UX/issues"
+  },
+  "homepage": "https://github.com/GabrielRod04/Examen-II-UX#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.0",
+    "express": "^5.1.0",
+    "firebase-admin": "^13.4.0",
+    "mongoose": "^8.16.1"
+  }
+}
