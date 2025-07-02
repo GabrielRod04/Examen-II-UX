@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
-//Info importante: Post contiene título, contenido y referencia a un usuario (authorId) como ObjectId para relacionar los posts con usuarios.
+//Info importante para que no se me olvide: Post contiene título, 
+//contenido y referencia a un usuario (authorId) como ObjectId para relacionar los posts con usuarios.
 const postSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -10,8 +11,8 @@ const postSchema = new mongoose.Schema({
     required: true
   },
   authorId: { 
-    type: mongoose.Schema.Types.ObjectId, 
-    ref: 'User',
+    type: String, 
+    //ref: 'User',
     required: true
   }
 }, {

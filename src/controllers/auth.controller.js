@@ -1,5 +1,4 @@
 import { firebaseAdmin } from '../services/firebase.service.js';
-import User from '../models/user.model.js';
 
 // Crear usuario en Firebase y MongoDB
 export const createUser = async (req, res, next) => {

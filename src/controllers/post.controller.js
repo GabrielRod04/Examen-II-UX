@@ -46,5 +46,22 @@ export const editPost = async (req, res, next) => {
   }
 };
 
+export const deletePost = async (req, res, next) => {
+  try {
+    const postId = req.params.id;
+
+    const deleted = await Post.findByIdAndDelete(postId);
+
+    if (!deleted) {
+      return res.status(404).json({ mensaje: 'Post no encontrado' });
+    }
+
+    res.json({ mensaje: 'Post eliminado exitosamente' });
+  } catch (error) {
+    next(error);
+  }
+};
+
+
 
 
