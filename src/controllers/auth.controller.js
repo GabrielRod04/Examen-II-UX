@@ -31,21 +31,15 @@ export const createUser = async (req, res, next) => {
   }
 };
 
-// LogIn (verifica email y password con Firebase y trae datos Mongo)
+
 export const logIn = async (req, res, next) => {
   try {
     const { email, password } = req.body;
 
-    // Simulacion:
-
-    // 1) Busca el usuario en MongoDB
     const user = await User.findOne({ email });
     if (!user) {
       return res.status(404).json({ mensaje: 'Usuario no encontrado' });
     }
-
-    // 2) Aquí normalmente verificarías el token o credenciales.
-    //asumimos login correcto.
 
     // 3) Buscar posts del usuario
     const posts = await (await import('../models/post.model.js')).default.find({ authorId: user._id });
@@ -61,7 +55,6 @@ export const logIn = async (req, res, next) => {
   }
 };
 
-// LogOut - dummy (el logout se maneja en frontend o token expire)
 export const logOut = (req, res) => {
   res.json({ mensaje: 'Que tengas un lindo dia, hasta luego' });
 };
